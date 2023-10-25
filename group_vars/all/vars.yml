@@ -1,0 +1,8 @@
+username: cloud
+packages:
+  - vim
+  - htop
+  - neofetch
+  - tmux
+  - speedtest-cli
+  - nano

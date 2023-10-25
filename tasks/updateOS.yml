@@ -1,0 +1,7 @@
+- name: Execute the non-interactive upgrade
+  ansible.builtin.shell: do-release-upgrade -y
+  register: upgrade_output
+
+- name: Display the upgrade output
+  debug:
+    var: upgrade_output.stdout_lines

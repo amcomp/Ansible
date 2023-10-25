@@ -1,7 +1,9 @@
 ---
-- hosts: all
+- hosts: home
   become: yes
 
   tasks:
     - import_tasks: tasks/essential.yaml
     - import_tasks: tasks/ssh.yml
+    #- ansible.builtin.import_tasks: tasks/reboot.yml #commenting out so it doesnt reboot the vm every time.
+    #- import_tasks: tasks/updateOS.yml #Untested 10/25

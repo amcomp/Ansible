@@ -7,3 +7,5 @@ packages:
   - speedtest-cli
   - nano
   - net-tools
+  - docker.io
+  - docker-compose

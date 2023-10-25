@@ -6,3 +6,4 @@ packages:
   - tmux
   - speedtest-cli
   - nano
+  - net-tools

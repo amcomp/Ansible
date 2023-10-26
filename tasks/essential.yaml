@@ -1,4 +1,4 @@
-- name: Update packages
+- name: "{{ name }}"
   apt:
     update_cache: yes
     upgrade: yes

@@ -1,10 +1,9 @@
 ---
-- hosts: corp
-  gather_facts: true
-  vars:
-    ansible_python_interpreter: /usr/bin/python3
-  tasks:
-    - name: Ping all hosts in corp group
-      ping:
+- name: Ping endpoints
+  ansible.builtin.ping:
+  register: ping_result
 
+- name: Show Ping Output
+  ansible.builtin.debug:
+    var: ping_result
 

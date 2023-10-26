@@ -3,6 +3,10 @@
   become: yes
 
   tasks:
+    - ansible.builtin.import_tasks: tasks/pingcc.yml
     - import_tasks: tasks/essential.yaml
     - import_tasks: tasks/ssh.yml
     - ansible.builtin.import_tasks: tasks/reboot.yml
+        
+
+        

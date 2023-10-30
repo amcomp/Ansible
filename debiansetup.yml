@@ -1,6 +1,8 @@
 ---
 - name: Execute Common Tasks on Home Hosts
-  hosts: home
+  hosts:
+    - home
+    - server
   become: true  # This allows tasks to run with elevated privileges
 
   tasks:

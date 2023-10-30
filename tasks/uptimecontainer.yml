@@ -6,11 +6,11 @@
     volumes:
       - uptime-kuma:/app/data
 
-- name: start uptimekuma
-  docker_container:
+- name: Start uptimekuma
+  community.docker.docker_container:
     name: kuma
     image: louislam/uptime-kuma:latest
     state: started
     restart_policy: "always"
 
-#deployed the app, but the app is unreachable with current deployment
+# deployed the app, but the app is unreachable with current deployment

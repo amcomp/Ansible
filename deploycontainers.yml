@@ -1,8 +1,9 @@
----
 - name: Execute Common Tasks on Home Hosts
   hosts: home
   become: true
 
   tasks:
-    - name:
+    - name: Add user to docker group
+      ansible.builtin.import_tasks: tasks/dockergroup.yml
+    - name: Deploy uptimeKuma
       ansible.builtin.import_tasks: tasks/uptimecontainer.yml

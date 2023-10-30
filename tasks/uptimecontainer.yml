@@ -1,16 +1,15 @@
 ---
-- name: Create a data container
+- name: Create a Docker Volume
+  community.docker.docker_volume:
+    name: uptime-kuma
+
+- name: Create and Start the Uptime Kuma Container
   community.docker.docker_container:
     name: kuma
     image: louislam/uptime-kuma:latest
     volumes:
       - uptime-kuma:/app/data
-
-- name: Start uptimekuma
-  community.docker.docker_container:
-    name: kuma
-    image: louislam/uptime-kuma:latest
-    state: started
+    ports:
+      - "3001:3001"
     restart_policy: "always"
-
-# deployed the app, but the app is unreachable with current deployment
+    state: started

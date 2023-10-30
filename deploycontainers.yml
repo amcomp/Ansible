@@ -1,0 +1,8 @@
+---
+- name: Execute Common Tasks on Home Hosts
+  hosts: home
+  become: true
+
+  tasks:
+    - name:
+      ansible.builtin.import_tasks: tasks/uptimecontainer.yml

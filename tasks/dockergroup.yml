@@ -12,4 +12,3 @@
     append: true
 
 # adds the var:username to the docker group after checking for group existance
-

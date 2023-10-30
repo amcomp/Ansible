@@ -7,3 +7,5 @@
       ansible.builtin.import_tasks: tasks/dockergroup.yml
     - name: Deploy uptimeKuma
       ansible.builtin.import_tasks: tasks/uptimecontainer.yml
+    - name: Deploy Portainer
+      ansible.builtin.import_tasks: tasks/deployportainer.yml

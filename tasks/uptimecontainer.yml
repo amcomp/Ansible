@@ -1,0 +1,15 @@
+---
+- name: Create a Uptime Volume
+  community.docker.docker_volume:
+    name: uptime-kuma
+
+- name: Create and Start the Uptime Kuma Container
+  community.docker.docker_container:
+    name: kuma
+    image: louislam/uptime-kuma:latest
+    volumes:
+      - uptime-kuma:/app/data
+    ports:
+      - "3001:3001"
+    restart_policy: "always"
+    state: started
